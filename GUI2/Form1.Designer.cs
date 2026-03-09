@@ -28,12 +28,67 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            Label = new Label();
+            textBoxInput = new TextBox();
+            buttonEncrypt = new Button();
+            textBoxOutput = new TextBox();
+            SuspendLayout();
+            // 
+            // Label
+            // 
+            Label.AutoSize = true;
+            Label.Location = new Point(12, 9);
+            Label.Name = "Label";
+            Label.Size = new Size(106, 20);
+            Label.TabIndex = 0;
+            Label.Text = "Введите текст:";
+            // 
+            // textBoxInput
+            // 
+            textBoxInput.Location = new Point(12, 32);
+            textBoxInput.Multiline = true;
+            textBoxInput.Name = "textBoxInput";
+            textBoxInput.Size = new Size(285, 142);
+            textBoxInput.TabIndex = 1;
+            // 
+            // buttonEncrypt
+            // 
+            buttonEncrypt.Location = new Point(12, 180);
+            buttonEncrypt.Name = "buttonEncrypt";
+            buttonEncrypt.Size = new Size(285, 36);
+            buttonEncrypt.TabIndex = 2;
+            buttonEncrypt.Text = "Шифруемся!!!!!!";
+            buttonEncrypt.UseVisualStyleBackColor = true;
+            // 
+            // textBoxOutput
+            // 
+            textBoxOutput.Location = new Point(12, 222);
+            textBoxOutput.Multiline = true;
+            textBoxOutput.Name = "textBoxOutput";
+            textBoxOutput.ReadOnly = true;
+            textBoxOutput.Size = new Size(285, 165);
+            textBoxOutput.TabIndex = 3;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(306, 398);
+            Controls.Add(textBoxOutput);
+            Controls.Add(buttonEncrypt);
+            Controls.Add(textBoxInput);
+            Controls.Add(Label);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label Label;
+        private TextBox textBoxInput;
+        private Button buttonEncrypt;
+        private TextBox textBoxOutput;
     }
 }
