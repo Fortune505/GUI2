@@ -59,6 +59,7 @@
             buttonEncrypt.TabIndex = 2;
             buttonEncrypt.Text = "Шифруемся!!!!!!";
             buttonEncrypt.UseVisualStyleBackColor = true;
+            buttonEncrypt.Click += buttonEncrypt_Click;
             // 
             // textBoxOutput
             // 

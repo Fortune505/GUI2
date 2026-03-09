@@ -18,5 +18,22 @@ namespace GUI2
 
             Properties.Settings.Default.Save();
         }
+
+        private void buttonEncrypt_Click(object sender, EventArgs e)
+        {
+            string inputText = textBoxInput.Text;
+
+            if (string.IsNullOrWhiteSpace(inputText))
+            {
+                MessageBox.Show("Пожалуйста, введите текст для замены.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string menaText = Logic.GetMena(inputText);
+
+            textBoxOutput.Text = menaText;
+
+            MessageBox.Show("Зашифрованно!!!!! \nДерши результат:\n" + menaText, "Успех WAAAAAAAAAAHH!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
