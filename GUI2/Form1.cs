@@ -29,11 +29,11 @@ namespace GUI2
                 return;
             }
 
-            string menaText = Logic.GetMena(inputText);
+            string encryptedText = Logic.GetEncryptedText(inputText);
 
-            textBoxOutput.Text = menaText;
+            textBoxOutput.Text = encryptedText;
 
-            MessageBox.Show("Зашифрованно!!!!! \nДерши результат:\n" + menaText, "Успех WAAAAAAAAAAHH!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Зашифрованно!!!!! \nДерши результат:\n" + encryptedText, "Успех WAAAAAAAAAAHH!!!!!", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
